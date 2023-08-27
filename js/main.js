@@ -126,7 +126,7 @@ function displayAboutInfo(output) {
                     "MySQL, Oracle, Tibero와 같은 다양한 데이터베이스 시스템을 다루며 고객 요구사항에 맞는 데이터베이스 구조 설계와 쿼리 최적화 작업을 수행하였습니다.</br>"+
                     "또한, 백업 및 복원 작업과 보안 강화를 통해 안정성과 무결성을 유지하였습니다.</br></br>"+
                     " 청음복지관에서는 청각장애인을 위한 팀으로 PM을 맡고 있으며, 키오스크 프로그램을 Spring Boot 기반으로 MySQL로 직접 설계하였습니다.</br></br>"+
-                    "청각장애인 팀들과의 데브옵스부터 설계, 총괄을 맡으며 항상 공부를 하고 있습니다.</br></br>"+
+                    "청각장애인 팀에서 PM을 맡고 있으며, 데브옵스부터 설계, 총괄 역할을 하면서 항상 공부를 하고 있습니다.</br></br>"+
                     " 뿐만 아니라 C 언어를 비롯한 네이티브 프로그래밍 분야에서도 뛰어난 역량을 갖추고 있습니다.</br>"+
                     "구조체 포인터와 함수 포인터를 활용하여 객체지향의 원칙을 유사 객체지향으로 구현할 수 있는 능력이 있으며,</br>"+
                     "Makefile 및 CMake 등의 도구를 사용하여 리눅스에서 gcc 컴파일러 디버깅 작업도 수행해보았습니다.</br>"+
@@ -155,13 +155,12 @@ function insertRow(table, label, value) {
     cell1.style.textAlign = 'left';
     cell1.style.color = '#D8DEE9';
 
-    // Check if the value contains a hyperlink
     if (value.includes("https://")) {
         var link = document.createElement('a');
         link.href = value;
         link.textContent = value;
-        link.target = "_blank"; // Open in a new tab
-        link.style.color = '#D8DEE9'; // Set hyperlink color to white
+        link.target = "_blank";
+        link.style.color = '#D8DEE9';
         cell2.appendChild(link);
     } else {
         value = value.replace(/\n/g, '\n');
