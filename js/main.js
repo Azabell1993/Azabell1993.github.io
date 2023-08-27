@@ -24,8 +24,9 @@ function handleCommand() {
 
     if (input === 'ls') {
         displayOutput("<pre><code>my_info@consoleStyle:~$ <span style='color:#9FCA56;'>ls</span>");
-        displayOutput("'cat < info' : 기본인적사항");
-        displayOutput("'cat < skill' : 프로그래밍 언어");
+        displayOutput("'cat < info' 또는 'info' || 'info' : 기본인적사항");
+        displayOutput("'cat < skill' 또는 'skill' : 스킬정보");
+        displayOutput("'cat < about' 또는 'about' : About은");
         displayOutput("'clear'      : 콘솔 창 정리");
         displayOutput("'ls'         : 명령어 모음");
         return;
@@ -33,13 +34,14 @@ function handleCommand() {
     
     if (input === 'help') {
         displayOutput("<pre><code>my_info@consoleStyle:~$ <span style='color:#9FCA56;'>help</span>");
-        displayOutput("'cat < info' : 기본인적사항");
-        displayOutput("'cat < skill' : 프로그래밍 언어");
+        displayOutput("'cat < info' 또는 'info' || 'info' : 기본인적사항");
+        displayOutput("'cat < skill' 또는 'skill' : 스킬정보");
+        displayOutput("'cat < about' 또는 'about' : About은");
         displayOutput("'clear'      : 콘솔 창 정리");
         displayOutput("'ls'         : 명령어 모음");
         return;
     }
-    
+
     // 입력한 명령어가 없을 경우
     displayOutput("<pre><code>my_info@consoleStyle:~$ <span style='color:#FF0000;'>명령어를 찾을 수 없습니다.</span>");
 }
