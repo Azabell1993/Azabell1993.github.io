@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
         theme: "dracula",
     });
 
-    editor.setSize("100%", "calc(100% - 50px)");
+    editor.setSize("100%", "calc(100% - 50px)"); 
 
     const Module = require('./wasm/wasm-parser.js');
 
