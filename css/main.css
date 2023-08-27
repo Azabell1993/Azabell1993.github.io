@@ -1,0 +1,81 @@
+body {
+    background-color: #1D2021;
+    color: #D8DEE9;
+    font-family: Consolas, monospace;
+    font-size: 14px;
+    padding: 20px;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+#console {
+    border-top: none;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.tab-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+#tab {
+    width: 30px;
+    height: 30px;
+    background-color: #D8DEE9;
+    border-radius: 10px;
+    text-align: center;
+    color: #1D2021;
+    font-size: 20px;
+    padding-top: 1px;
+}
+
+#tab-label {
+    margin-left: 5px;
+}
+
+#prompt {
+    color: #9FCA56;
+    position: relative;
+    padding-right: 10px;
+}
+
+#prompt::after {
+    position: absolute;
+    right: 0;
+    color: white;
+}
+
+.console-input {
+    background-color: #1D2021;
+    border: none;
+    outline: none;
+    color: #D8DEE9;
+    font-family: Consolas, monospace;
+    font-size: 14px;
+    width: 100%;
+    caret-color: #ffffff; /* 커서 색상 지정 */
+}
+
+#table-container {
+    display: none;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th, td {
+    border: 1px solid #D8DEE9;
+    padding: 8px;
+    text-align: left;
+    color: #D8DEE9;
+}
+
+th {
+    background-color: #4C566A;
+}
