@@ -1,0 +1,52 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #1E1E1E;
+    color: #D8DEE9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+}
+.editor-top {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+    background-color: #1E1E1E;
+}
+.editor-top h1 {
+    margin: 0;
+    font-weight: bold;
+    font-size: 24px;
+    color: #D8DEE9;
+}
+#save-button {
+    background-color: #4CAF50; /* Change the button color */
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+#save-button:hover {
+    background-color: #45a049;
+}
+.editor-sidebar {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100px;
+    background-color: #1E1E1E;
+    padding: 10px;
+}
+#editor-container {
+    width: 80%;
+    height: 80vh;
+    border: 1px solid #D8DEE9;
+    border-radius: 5px;
+    margin-top: 10px;
+}

@@ -4,21 +4,31 @@ function handleCommand () {
     
     if (input === 'cat < info' || input === 'info') {
         displayResumeInfo();
+        scrollToCursor();
         return;    
     }
 
     if (input === 'cat < skill' || input === 'skill') {
         displaySkillInfo();
+        scrollToCursor();
         return;    
     }
 
     if (input === 'cat < about' || input === 'about') {
         displayAboutInfo();
+        scrollToCursor();
         return;
     }
 
     if (input === 'clear') {
         clearConsole();
+        scrollToCursor();
+        return;
+    }
+
+    if (input === 'editor') {
+        openEditorWindow();
+        scrollToCursor();
         return;
     }
 
@@ -29,6 +39,7 @@ function handleCommand () {
         displayOutput("'cat < about' 또는 'about' : About은");
         displayOutput("'clear'      : 콘솔 창 정리");
         displayOutput("'ls'         : 명령어 모음");
+        scrollToCursor();
         return;
     }
     
@@ -39,12 +50,12 @@ function handleCommand () {
         displayOutput("'cat < about' 또는 'about' : About은");
         displayOutput("'clear'      : 콘솔 창 정리");
         displayOutput("'ls'         : 명령어 모음");
+        scrollToCursor();
         return;
     }
 
     // 입력한 명령어가 없을 경우
     displayOutput("<pre><code>my_info@consoleStyle:~$ <span style='color:#FF0000;'>명령어를 찾을 수 없습니다.</span>");
-
     scrollToCursor();
 }
 
@@ -190,4 +201,30 @@ function scrollToCursor() {
         block: 'end',
         inline: 'nearest'
     });
+}
+
+// ----------------------------------------------------------------------------------------------------------
+// ----------------------------------------------------------------------------------------------------------
+
+function openEditorWindow() {
+    var editorWindow = window.open('editor.html', '_blank', 'width=1200,height=900');
+    editorWindow.onload = function () {
+        initializeEditor(editorWindow);
+    };
+    document.getElementById('commandInput').value = ''; // Clear input
+    return;
+}
+
+function initializeEditor(editorWindow) {
+    var editorContainer = editorWindow.document.getElementById('editor-container');
+
+    var editor = CodeMirror(editorContainer, {
+        mode: 'text/x-csrc',
+        theme: 'default',
+        lineNumbers: true,
+        indentWithTabs: true,
+        tabSize: 4,
+    });
+
+    editor.setValue("// Enter your C code here...");
 }
