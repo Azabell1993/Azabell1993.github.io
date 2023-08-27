@@ -1,5 +1,5 @@
 
-function handleCommand() {
+function handleCommand () {
     var input = document.getElementById('commandInput').value.trim();
     
     if (input === 'cat < info' || input === 'info') {
@@ -44,6 +44,8 @@ function handleCommand() {
 
     // 입력한 명령어가 없을 경우
     displayOutput("<pre><code>my_info@consoleStyle:~$ <span style='color:#FF0000;'>명령어를 찾을 수 없습니다.</span>");
+
+    scrollToCursor();
 }
 
 function displayOutput(output) {
@@ -53,7 +55,7 @@ function displayOutput(output) {
     outputDiv.scrollTop = outputDiv.scrollHeight; // Scroll to the bottom
     document.getElementById('commandInput').value = ''; // Clear input
 }
-
+    
 function displayResumeInfo(output) {
     var outputDiv = document.getElementById('output');
     var table = document.createElement('table');
@@ -174,7 +176,18 @@ function insertRow(table, label, value) {
     cell2.style.color = '#D8DEE9';
 }
 
+// 화면 클리어
 function clearConsole() {
     document.getElementById('output').innerHTML = '';
     document.getElementById('commandInput').value = '';
+}
+
+// 커서 위치로 스크롤 이동
+function scrollToCursor() {
+    var inputElement = document.getElementById('commandInput');
+    inputElement.scrollIntoView({
+        behavior: 'smooth',
+        block: 'end',
+        inline: 'nearest'
+    });
 }
