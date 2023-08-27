@@ -3,12 +3,12 @@ document.addEventListener("DOMContentLoaded", function () {
         value: "// 코드를 입력하세요...",
         mode: "text/x-csrc",
         lineNumbers: true,
-        theme: "dracula", // Change the theme to 'dracula'
+        theme: "dracula",
     });
 
     editor.setSize("100%", "calc(100% - 50px)");
 
-    const Module = require('./wasm-parser.js');
+    const Module = require('./wasm/wasm-parser.js');
 
     function processContent(content) {
         Module._parseAndProcessContent(content);
