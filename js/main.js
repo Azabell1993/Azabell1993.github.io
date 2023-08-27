@@ -160,7 +160,7 @@ function insertRow(table, label, value) {
         link.href = value;
         link.textContent = value;
         link.target = "_blank";
-        link.style.color = '#D8DEE9';
+        link.style.color = '#e9fa2d';
         cell2.appendChild(link);
     } else {
         value = value.replace(/\n/g, '\n');

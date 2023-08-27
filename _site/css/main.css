@@ -56,7 +56,7 @@ body {
     font-family: Consolas, monospace;
     font-size: 14px;
     width: 100%;
-    caret-color: #ffffff; /* 커서 색상 지정 */
+    caret-color: #ffffff;
 }
 
 #table-container {
