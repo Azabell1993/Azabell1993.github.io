@@ -22,7 +22,17 @@ function handleCommand() {
         return;
     }
 
-    if (input === 'ls' || input === 'help') {
+    if (input === 'ls') {
+        displayOutput("<pre><code>my_info@consoleStyle:~$ <span style='color:#9FCA56;'>ls</span>");
+        displayOutput("'cat < info' : 기본인적사항");
+        displayOutput("'cat < skill' : 프로그래밍 언어");
+        displayOutput("'clear'      : 콘솔 창 정리");
+        displayOutput("'ls'         : 명령어 모음");
+        return;
+    }
+    
+    if (input === 'help') {
+        displayOutput("<pre><code>my_info@consoleStyle:~$ <span style='color:#9FCA56;'>help</span>");
         displayOutput("'cat < info' : 기본인적사항");
         displayOutput("'cat < skill' : 프로그래밍 언어");
         displayOutput("'clear'      : 콘솔 창 정리");
