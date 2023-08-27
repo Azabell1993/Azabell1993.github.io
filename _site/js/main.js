@@ -211,7 +211,7 @@ function openEditorWindow() {
     editorWindow.onload = function () {
         initializeEditor(editorWindow);
     };
-    document.getElementById('commandInput').value = ''; // Clear input
+    document.getElementById('commandInput').value = '7'; // Clear input
     return;
 }
 
