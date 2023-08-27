@@ -79,3 +79,11 @@ th, td {
 th {
     background-color: #4C566A;
 }
+
+#console-output {
+    font-family: monospace;
+    white-space: pre;
+    color: white;
+    padding: 1px;
+    border-radius: 1px;
+}
