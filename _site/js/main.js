@@ -103,13 +103,14 @@ function displaySkillInfo(output) {
 
     var preTag = document.createElement('pre');
     preTag.style.margin = '0';
-    displayOutput("<pre><code>my_info@consoleStyle:~$ <span style='color:#9FCA56;'>프로그래밍 언어</span>");
-    displayOutput("<pre><code><span style='color:#9FCA56;'>- 프로그래밍 언어</span></br>"
-    + "  <strong>C언어</strong> - 구조체 포인터와 함수 포인터를 어려움 없이 활용, 객체지향의 5원칙을 유사 객체지향으로 흉내, Makefile, Cmake, gdb 有</br></br>"
-    + " 유사 OOP 설계 연습(2021년)              : 하기 링크 A </br> "
-    + " 유사 STL 설계 연습(2023년 상반기)_1     : 하기 링크 B </br> "
-    + " 유사 STL 설계 연습(2023년 상반기)_2     : 하기 링크 C </br> "
-    + " 유사 Lambda 설계 연습(2023년 상반기)    : 하기 링크 D </br></span>");
+    displayOutput("<pre><code>my_info@consoleStyle:~$ <span style='color:#9FCA56;'>DBMS</span>");
+    displayOutput("<pre><code><span style='color:#9FCA56;'>- DBMS </br>"
+        + "  <strong>C언어</strong></br>"
+        + " 구조체 포인터와 함수 포인터를 어려움 없이 활용, 객체지향의 5원칙을 유사 객체지향으로 흉내, Makefile, Cmake, gdb 有</br ></br > "
+        + " 유사 OOP 설계 연습(2021년)              : 하기 링크 A </br> "
+        + " 유사 STL 설계 연습(2023년 상반기)_1     : 하기 링크 B </br> "
+        + " 유사 STL 설계 연습(2023년 상반기)_2     : 하기 링크 C </br> "
+        + " 유사 Lambda 설계 연습(2023년 상반기)    : 하기 링크 D </br></span>")
     
     insertRow(table, "A", "https://github.com/Azabell1993/ClangStructPointerExample")
     insertRow(table,"B" ,"https://github.com/Azabell1993/c-programming-structPointer_data_structure_2023/blob/cb4f45dd76f58c9f14b320efbcca088a97f15231/basic_stl_2023/vector.h#L1-L133")
@@ -137,6 +138,7 @@ function displaySkillInfo(output) {
     + " 엔터티와 관계의 정의, 속성 및 제약 조건 등을 고려하여 ER 다이어그램을 작성하였습니다.이를 기반으로 데이터베이스 스키마를 구축하고 관리하였습니다.</br>"
     + "- 성능 최적화: 대규모 트래픽 처리에 필요한 성능 최적화 작업도 수행하였습니다.</br>" 
     + " 인덱싱 전략, 쿼리 튜닝 등의 기술을 활용하여 쿼리 실행 속도와 시스템 응답 시간 개선에 기여하였습니다.</br></span>")
+    
     outputDiv.appendChild(table);
     outputDiv.scrollTop = outputDiv.scrollHeight;
     document.getElementById('commandInput').value = '';
