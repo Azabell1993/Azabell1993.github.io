@@ -230,9 +230,24 @@ function openEditorWindow() {
     var editorWindow = window.open('editor.html', '_blank', 'width=1200,height=900');
     editorWindow.onload = function () {
         initializeEditor(editorWindow);
+        var savedContent = localStorage.getItem("savedContent");
+        editorWindow.postMessage(savedContent, '*'); // Send saved content to editor.html
     };
     document.getElementById('commandInput').value = '7'; // Clear input
     return;
+}
+
+window.addEventListener('message', function (event) {
+    var content = event.data;
+    if (content !== undefined) {
+        editor.setValue(content);
+    }
+});
+
+function receiveEditorContent(content) {
+    var inputElement = document.getElementById('commandInput');
+    inputElement.value = content;
+    displayOutput("<pre><code>my_info@consoleStyle:~$ " + content);
 }
 
 function initializeEditor(editorWindow) {
