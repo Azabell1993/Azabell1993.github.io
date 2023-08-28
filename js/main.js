@@ -102,14 +102,14 @@ function displaySkillInfo(output) {
     table.style.borderCollapse = 'collapse';
     displayOutput("<pre><code>my_info@consoleStyle:~$ <span style='color:#9FCA56;'>프로그래밍 언어</span>");
     insertRow(table, "  로우레벨 언어 ","-   기본정보    ");
-    insertRow(table, "  C언어 ","- 구조체 포인터와 함수 포인터를 어려움 없이 활용하여서 객체지향의 5원칙을 유사 객체지향으로 흉내낼 수 있는 정도 Makefile, Cmake을 경험하였고 리눅스에서 gcc 컴파일러를 gdb r 해서 에러를 잡아본 경험 有");
+    insertRow(table, "  C언어 ","- 구조체 포인터와 함수 포인터를 어려움 없이 활용하여서 객체지향의 5원칙을 유사 객체지향으로 흉내낼 수 있는 정도 Makefile, Cmake을 경험하였고 리눅스에서 gcc 컴파일러를 gdd run을 하여서 에러를 잡아본 경험 有");
     insertRow(table, "  유사 OOP 설계 연습(2021년) ","https://github.com/Azabell1993/ClangStructPointerExample");
     insertRow(table, "  유사 STL 설계 연습(2023년 상반기)_1 ","https://github.com/Azabell1993/c-programming-structPointer_data_structure_2023/blob/cb4f45dd76f58c9f14b320efbcca088a97f15231/basic_stl_2023/vector.h#L1-L133");
     insertRow(table, "  유사 STL 설계 연습(2023년 상반기)_2 ","https://github.com/Azabell1993/c-programming-structPointer_data_structure_2023/blob/cb4f45dd76f58c9f14b320efbcca088a97f15231/basic_stl_2023/add.h#L1-L73");
     insertRow(table, "  유사 Lambda 설계 연습(2023년 상반기)","https://github.com/Azabell1993/c-programming-structPointer_data_structure_2023/blob/cb4f45dd76f58c9f14b320efbcca088a97f15231/C_functional%20programming/structural%20design/test4.c#L1-L36");
     
     insertRow(table, " 웹 실무",
-        "- SI 웹 개발자로 경험한 프로젝트를 통해 복지부에서의 대규모 트래픽 DBMS 및 MVC패턴에 따른 자바 프로그래밍을 경험하였습니다.\n" +
+        "- SI 웹 개발자로 경험한 프로젝트를 통해 복지부에서의 대규모 트래픽 DBMS 및 MVC패턴에 따른 자바 프로그래밍을 '경험'하였습니다.\n" +
         "- 기획서와 문서화를 통해 전체적인 프로세스를 SI에서 배울 수 있었습니다.\n" +
         "- Vue 프레임워크인 Nuxt.js를 통해 프론트 언어로 화면 개발을 하였습니다.\n" +
         "- DB (Oracle, Tibero, MySQL) : 고객의 요구사항에 맞는 기능을 삽입하거나 수정하고 설계할 수 있습니다."
