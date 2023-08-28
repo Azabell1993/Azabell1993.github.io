@@ -104,39 +104,24 @@ function displaySkillInfo(output) {
     var preTag = document.createElement('pre');
     preTag.style.margin = '0';
     displayOutput("<pre><code>my_info@consoleStyle:~$ <span style='color:#9FCA56;'>프로그래밍 언어</span>");
-    displayOutput("<pre><code><span style='color:#9FCA56;'>- 프로그래밍 언어</span></br>"
-    + "  <strong>C언어</strong> - 구조체 포인터와 함수 포인터를 어려움 없이 활용, 객체지향의 5원칙을 유사 객체지향으로 흉내, Makefile, Cmake, gdb 有</br></br>"
-    + " 유사 OOP 설계 연습(2021년)              : 하기 링크 A </br> "
-    + " 유사 STL 설계 연습(2023년 상반기)_1     : 하기 링크 B </br> "
-    + " 유사 STL 설계 연습(2023년 상반기)_2     : 하기 링크 C </br> "
-    + " 유사 Lambda 설계 연습(2023년 상반기)    : 하기 링크 D </br></span>");
+    insertRow(table, "  로우레벨 언어 ","-   기본정보    ");
+    insertRow(table, "  C언어 ","- 구조체 포인터와 함수 포인터를 어려움 없이 활용하여서 객체지향의 5원칙을 유사 객체지향으로 흉내낼 수 있는 정도 Makefile, Cmake을 경험하였고 리눅스에서 gcc 컴파일러를 gdb r 해서 에러를 잡아본 경험 有");
+    insertRow(table, "  유사 OOP 설계 연습(2021년) ","https://github.com/Azabell1993/ClangStructPointerExample");
+    insertRow(table, "  유사 STL 설계 연습(2023년 상반기)_1 ","https://github.com/Azabell1993/c-programming-structPointer_data_structure_2023/blob/cb4f45dd76f58c9f14b320efbcca088a97f15231/basic_stl_2023/vector.h#L1-L133");
+    insertRow(table, "  유사 STL 설계 연습(2023년 상반기)_2 ","https://github.com/Azabell1993/c-programming-structPointer_data_structure_2023/blob/cb4f45dd76f58c9f14b320efbcca088a97f15231/basic_stl_2023/add.h#L1-L73");
+    insertRow(table, "  유사 Lambda 설계 연습(2023년 상반기)","https://github.com/Azabell1993/c-programming-structPointer_data_structure_2023/blob/cb4f45dd76f58c9f14b320efbcca088a97f15231/C_functional%20programming/structural%20design/test4.c#L1-L36");
     
-    insertRow(table, "A", "https://github.com/Azabell1993/ClangStructPointerExample")
-    insertRow(table,"B" ,"https://github.com/Azabell1993/c-programming-structPointer_data_structure_2023/blob/cb4f45dd76f58c9f14b320efbcca088a97f15231/basic_stl_2023/vector.h#L1-L133")
-    insertRow(table,"C" ,"https://github.com/Azabell1993/c-programming-structPointer_data_structure_2023/blob/cb4f45dd76f58c9f14b320efbcca088a97f15231/basic_stl_2023/add.h#L1-L73") 
-    insertRow(table, "D", "https://github.com/Azabell1993/c-programming-structPointer_data_structure_2023/blob/cb4f45dd76f58c9f14b320efbcca088a97f15231/C_functional%20programming/structural%20design/test4.c#L1-L36")
-
-    var preTag = document.createElement('pre');
-    preTag.style.margin = '0';
-    displayOutput("<pre><code>my_info@consoleStyle:~$ <span style='color:#9FCA56;'>웹 실무</span>");
-    displayOutput("<pre><code><span style='color:#9FCA56;'>- 웹 실무</br>"
-    + "- SI 웹 개발자로 경험한 프로젝트를 통해 복지부에서의 대규모 트래픽 DBMS 및 MVC패턴에 따른 자바 프로그래밍을 경험하였습니다.</br>"
-    + "- 기획서와 문서화를 통해 전체적인 프로세스를 SI에서 배울 수 있었습니다.</br>"
-    + "- Vue 프레임워크인 Nuxt.js를 통해 프론트 언어로 화면 개발을 하였습니다.</br>"
-    + "- DB (Oracle, Tibero, MySQL) : 고객의 요구사항에 맞는 기능을 삽입하거나 수정하고 설계할 수 있습니다.</br></span>");
-
-
-    var preTag = document.createElement('pre');
-    preTag.style.margin = '0';
-    displayOutput("<pre><code>my_info@consoleStyle:~$ <span style='color:#9FCA56;'>DBMS</span>");
-    displayOutput("<pre><code><span style='color:#9FCA56;'>- DBMS </br>"
-    + "- MySQL, Oracle, Tibero: 프로젝트에서 데이터베이스 유지보수를 담당하면서 다양한 데이터베이스 시스템을 다루었습니다.</br>"
-    + "- 고객의 요구사항에 맞게 데이터베이스 구조를 설계하고, 쿼리 작성 및 최적화를 수행하였습니다.</br>"
-    + " 효율적인 옵티마이저 사용을 통해 성능 개선을 이루었습니다.</br > "
-    + "- 데이터 모델링: 프로젝트 초기 단계에서 요구사항 분석과 함께 데이터 모델링을 수행하였습니다.</br>" 
-    + " 엔터티와 관계의 정의, 속성 및 제약 조건 등을 고려하여 ER 다이어그램을 작성하였습니다.이를 기반으로 데이터베이스 스키마를 구축하고 관리하였습니다.</br>"
-    + "- 성능 최적화: 대규모 트래픽 처리에 필요한 성능 최적화 작업도 수행하였습니다.</br>" 
-    + " 인덱싱 전략, 쿼리 튜닝 등의 기술을 활용하여 쿼리 실행 속도와 시스템 응답 시간 개선에 기여하였습니다.</br></span>")
+    insertRow(table, " 웹 실무",
+        "- SI 웹 개발자로 경험한 프로젝트를 통해 복지부에서의 대규모 트래픽 DBMS 및 MVC패턴에 따른 자바 프로그래밍을 경험하였습니다.\n" +
+        "- 기획서와 문서화를 통해 전체적인 프로세스를 SI에서 배울 수 있었습니다.\n" +
+        "- Vue 프레임워크인 Nuxt.js를 통해 프론트 언어로 화면 개발을 하였습니다.\n" +
+        "- DB (Oracle, Tibero, MySQL) : 고객의 요구사항에 맞는 기능을 삽입하거나 수정하고 설계할 수 있습니다."
+    );
+    insertRow(table, "DBMS ", 
+        "- MySQL, Oracle, Tibero: 프로젝트에서 데이터베이스 유지보수를 담당하면서 다양한 데이터베이스 시스템을 다루었습니다.\n" +
+        "- 고객의 요구사항에 맞게 데이터베이스 구조를 설계하고, 쿼리 작성 및 최적화를 수행하였습니다. 효율적인 옵티마이저 사용을 통해 성능 개선을 이루었습니다.\n" +
+        "- 데이터 모델링: 프로젝트 초기 단계에서 요구사항 분석과 함께 데이터 모델링을 수행하였습니다. 엔터티와 관계의 정의, 속성 및 제약 조건 등을 고려하여 ER 다이어그램을 작성하였습니다. 이를 기반으로 데이터베이스 스키마를 구축하고 관리하였습니다.\n" +
+        "- 성능 최적화: 대규모 트래픽 처리에 필요한 성능 최적화 작업도 수행하였습니다. 인덱싱 전략, 쿼리 튜닝 등의 기술을 활용하여 쿼리 실행 속도와 시스템 응답 시간 개선에 기여하였습니다.")
     outputDiv.appendChild(table);
     outputDiv.scrollTop = outputDiv.scrollHeight;
     document.getElementById('commandInput').value = '';
@@ -156,7 +141,7 @@ function displayAboutInfo(output) {
                     " 신입으로 23년 10월에 웹 SI 컨소시엄 사에 취직을 하였으며, 데이터베이스와 관련하여 안정적이고 최적화된 시스템 운영 경험이 있습니다.</br>"+
                     "MySQL, Oracle, Tibero와 같은 다양한 데이터베이스 시스템을 다루며 고객 요구사항에 맞는 데이터베이스 구조 설계와 쿼리 최적화 작업을 수행하였습니다.</br>"+
                     "또한, 백업 및 복원 작업과 보안 강화를 통해 안정성과 무결성을 유지하였습니다.</br></br>"+
-                    " 청음복지관에서는 청각장애인을 위한 팀으로 PM을 맡고 있으며, 키오스크 프로그램을 Spring Boot 기반으로 MySQL로 직접 설계하였습니다.</br></br>"+
+                    " 청음복지관에서는 청각장애인을 위한 팀의 PM을 맡고 있으며, 키오스크 프로그램을 Spring Boot 기반으로 MySQL로 직접 설계하였습니다.</br></br>"+
                     "청각장애인 팀에서 PM을 맡고 있으며, 데브옵스부터 설계, 총괄 역할을 하면서 항상 공부를 하고 있습니다.</br></br>"+
                     " 뿐만 아니라 C 언어를 비롯한 네이티브 프로그래밍 분야에서도 뛰어난 역량을 갖추고 있습니다.</br>"+
                     "구조체 포인터와 함수 포인터를 활용하여 객체지향의 원칙을 유사 객체지향으로 구현할 수 있는 능력이 있으며,</br>"+
