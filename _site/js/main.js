@@ -55,7 +55,7 @@ function handleCommand () {
     }
 
     // 입력한 명령어가 없을 경우
-    displayOutput("<pre><code>my_info@consoleStyle:~$ <span style='color:#FF0000;'>명령어를 찾을 수 없습니다.</span>");
+    displayOutput("<pre><code>my_info@consoleStyle:~$ <span style='color:#FF0000;'> </span>");
     scrollToCursor();
 }
 
@@ -100,25 +100,43 @@ function displaySkillInfo(output) {
     var table = document.createElement('table');
     table.style.width = '100%';
     table.style.borderCollapse = 'collapse';
+
+    var preTag = document.createElement('pre');
+    preTag.style.margin = '0';
     displayOutput("<pre><code>my_info@consoleStyle:~$ <span style='color:#9FCA56;'>프로그래밍 언어</span>");
-    insertRow(table, "  로우레벨 언어 ","-   기본정보    ");
-    insertRow(table, "  C언어 ","- 구조체 포인터와 함수 포인터를 어려움 없이 활용하여서 객체지향의 5원칙을 유사 객체지향으로 흉내낼 수 있는 정도 Makefile, Cmake을 경험하였고 리눅스에서 gcc 컴파일러를 gdb r 해서 에러를 잡아본 경험 有");
-    insertRow(table, "  유사 OOP 설계 연습(2021년) ","https://github.com/Azabell1993/ClangStructPointerExample");
-    insertRow(table, "  유사 STL 설계 연습(2023년 상반기)_1 ","https://github.com/Azabell1993/c-programming-structPointer_data_structure_2023/blob/cb4f45dd76f58c9f14b320efbcca088a97f15231/basic_stl_2023/vector.h#L1-L133");
-    insertRow(table, "  유사 STL 설계 연습(2023년 상반기)_2 ","https://github.com/Azabell1993/c-programming-structPointer_data_structure_2023/blob/cb4f45dd76f58c9f14b320efbcca088a97f15231/basic_stl_2023/add.h#L1-L73");
-    insertRow(table, "  유사 Lambda 설계 연습(2023년 상반기)","https://github.com/Azabell1993/c-programming-structPointer_data_structure_2023/blob/cb4f45dd76f58c9f14b320efbcca088a97f15231/C_functional%20programming/structural%20design/test4.c#L1-L36");
+    displayOutput("<pre><code><span style='color:#9FCA56;'>- 프로그래밍 언어</span></br>"
+    + "  <strong>C언어</strong> - 구조체 포인터와 함수 포인터를 어려움 없이 활용, 객체지향의 5원칙을 유사 객체지향으로 흉내, Makefile, Cmake, gdb 有</br></br>"
+    + " 유사 OOP 설계 연습(2021년)              : 하기 링크 A </br> "
+    + " 유사 STL 설계 연습(2023년 상반기)_1     : 하기 링크 B </br> "
+    + " 유사 STL 설계 연습(2023년 상반기)_2     : 하기 링크 C </br> "
+    + " 유사 Lambda 설계 연습(2023년 상반기)    : 하기 링크 D </br></span>");
     
-    insertRow(table, " 웹 실무",
-        "- SI 웹 개발자로 경험한 프로젝트를 통해 복지부에서의 대규모 트래픽 DBMS 및 MVC패턴에 따른 자바 프로그래밍을 경험하였습니다.\n" +
-        "- 기획서와 문서화를 통해 전체적인 프로세스를 SI에서 배울 수 있었습니다.\n" +
-        "- Vue 프레임워크인 Nuxt.js를 통해 프론트 언어로 화면 개발을 하였습니다.\n" +
-        "- DB (Oracle, Tibero, MySQL) : 고객의 요구사항에 맞는 기능을 삽입하거나 수정하고 설계할 수 있습니다."
-    );
-    insertRow(table, "DBMS ", 
-        "- MySQL, Oracle, Tibero: 프로젝트에서 데이터베이스 유지보수를 담당하면서 다양한 데이터베이스 시스템을 다루었습니다.\n" +
-        "- 고객의 요구사항에 맞게 데이터베이스 구조를 설계하고, 쿼리 작성 및 최적화를 수행하였습니다. 효율적인 옵티마이저 사용을 통해 성능 개선을 이루었습니다.\n" +
-        "- 데이터 모델링: 프로젝트 초기 단계에서 요구사항 분석과 함께 데이터 모델링을 수행하였습니다. 엔터티와 관계의 정의, 속성 및 제약 조건 등을 고려하여 ER 다이어그램을 작성하였습니다. 이를 기반으로 데이터베이스 스키마를 구축하고 관리하였습니다.\n" +
-        "- 성능 최적화: 대규모 트래픽 처리에 필요한 성능 최적화 작업도 수행하였습니다. 인덱싱 전략, 쿼리 튜닝 등의 기술을 활용하여 쿼리 실행 속도와 시스템 응답 시간 개선에 기여하였습니다.")
+    insertRow(table, "A", "https://github.com/Azabell1993/ClangStructPointerExample")
+    insertRow(table,"B" ,"https://github.com/Azabell1993/c-programming-structPointer_data_structure_2023/blob/cb4f45dd76f58c9f14b320efbcca088a97f15231/basic_stl_2023/vector.h#L1-L133")
+    insertRow(table,"C" ,"https://github.com/Azabell1993/c-programming-structPointer_data_structure_2023/blob/cb4f45dd76f58c9f14b320efbcca088a97f15231/basic_stl_2023/add.h#L1-L73") 
+    insertRow(table, "D", "https://github.com/Azabell1993/c-programming-structPointer_data_structure_2023/blob/cb4f45dd76f58c9f14b320efbcca088a97f15231/C_functional%20programming/structural%20design/test4.c#L1-L36")
+
+    var preTag = document.createElement('pre');
+    preTag.style.margin = '0';
+    displayOutput("<pre><code>my_info@consoleStyle:~$ <span style='color:#9FCA56;'>웹 실무</span>");
+    displayOutput("<pre><code><span style='color:#9FCA56;'>- 웹 실무</br>"
+    + "- SI 웹 개발자로 경험한 프로젝트를 통해 복지부에서의 대규모 트래픽 DBMS 및 MVC패턴에 따른 자바 프로그래밍을 경험하였습니다.</br>"
+    + "- 기획서와 문서화를 통해 전체적인 프로세스를 SI에서 배울 수 있었습니다.</br>"
+    + "- Vue 프레임워크인 Nuxt.js를 통해 프론트 언어로 화면 개발을 하였습니다.</br>"
+    + "- DB (Oracle, Tibero, MySQL) : 고객의 요구사항에 맞는 기능을 삽입하거나 수정하고 설계할 수 있습니다.</br></span>");
+
+
+    var preTag = document.createElement('pre');
+    preTag.style.margin = '0';
+    displayOutput("<pre><code>my_info@consoleStyle:~$ <span style='color:#9FCA56;'>DBMS</span>");
+    displayOutput("<pre><code><span style='color:#9FCA56;'>- DBMS </br>"
+    + "- MySQL, Oracle, Tibero: 프로젝트에서 데이터베이스 유지보수를 담당하면서 다양한 데이터베이스 시스템을 다루었습니다.</br>"
+    + "- 고객의 요구사항에 맞게 데이터베이스 구조를 설계하고, 쿼리 작성 및 최적화를 수행하였습니다.</br>"
+    + " 효율적인 옵티마이저 사용을 통해 성능 개선을 이루었습니다.</br > "
+    + "- 데이터 모델링: 프로젝트 초기 단계에서 요구사항 분석과 함께 데이터 모델링을 수행하였습니다.</br>" 
+    + " 엔터티와 관계의 정의, 속성 및 제약 조건 등을 고려하여 ER 다이어그램을 작성하였습니다.이를 기반으로 데이터베이스 스키마를 구축하고 관리하였습니다.</br>"
+    + "- 성능 최적화: 대규모 트래픽 처리에 필요한 성능 최적화 작업도 수행하였습니다.</br>" 
+    + " 인덱싱 전략, 쿼리 튜닝 등의 기술을 활용하여 쿼리 실행 속도와 시스템 응답 시간 개선에 기여하였습니다.</br></span>")
     outputDiv.appendChild(table);
     outputDiv.scrollTop = outputDiv.scrollHeight;
     document.getElementById('commandInput').value = '';
@@ -151,7 +169,7 @@ function displayAboutInfo(output) {
                     " 더 나아가서 저의 목표는 웹 엔진부터 시스템까지 넓은 범위의 전체적인 개발 과정에 참여하는 것이 가능한 프로가 되는 것입니다.</br>"+
                     "문제 해결 능력과 협업 능력에 자신감을 갖추고, 항상 최신 기술 동향에 관심을 가지며 성장합니다.</br></br>"+
                     " C 언어를 활용한 유사 객체지향 설계 경험은 로우레벨 프로그래밍 분야에서 다양한 역할과 기회로 이어질 수 있다고 생각합니다.</br>"+
-                    "이 경험을 웹 실무에 적용하여 복잡한 시스템 개발을 함께 해나가며 개발자들과 협력하여 세상의 발전에 기여하는 백엔드 개발자로 성장하고자 합니다.</br></span");
+                    "이 경험을 웹 실무에 적용하여 복잡한 시스템 개발을 함께 해나가며 개발자들과 협력하여 세상의 발전에 기여하는 백엔드 개발자로 성장하고자 합니다.</br></span>");
     outputDiv.appendChild(table);
     outputDiv.scrollTop = outputDiv.scrollHeight;
     document.getElementById('commandInput').value = '';
