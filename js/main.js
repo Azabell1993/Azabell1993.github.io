@@ -103,8 +103,8 @@ function displaySkillInfo(output) {
 
     var preTag = document.createElement('pre');
     preTag.style.margin = '0';
-    displayOutput("<pre><code>my_info@consoleStyle:~$ <span style='color:#9FCA56;'>DBMS</span>");
-    displayOutput("<pre><code><span style='color:#9FCA56;'>- DBMS </br>"
+    displayOutput("<pre><code>my_info@consoleStyle:~$ <span style='color:#9FCA56;'>프로그래밍</span>");
+    displayOutput("<pre><code><span style='color:#9FCA56;'>- 프로그래밍 </br>"
         + "  <strong>C언어</strong></br>"
         + " 구조체 포인터와 함수 포인터를 어려움 없이 활용, 객체지향의 5원칙을 유사 객체지향으로 흉내, Makefile, Cmake, gdb 有</br ></br > "
         + " 유사 OOP 설계 연습(2021년)              : 하기 링크 A </br> "
