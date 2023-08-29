@@ -39,6 +39,7 @@ function handleCommand () {
         displayOutput("'cat < about' 또는 'about' : About은");
         displayOutput("'clear'      : 콘솔 창 정리");
         displayOutput("'ls'         : 명령어 모음");
+        displayOutput("'editor'     : 에디터 창 호출");
         scrollToCursor();
         return;
     }
@@ -50,6 +51,7 @@ function handleCommand () {
         displayOutput("'cat < about' 또는 'about' : About은");
         displayOutput("'clear'      : 콘솔 창 정리");
         displayOutput("'ls'         : 명령어 모음");
+        displayOutput("'editor'     : 에디터 창 호출");
         scrollToCursor();
         return;
     }
@@ -121,9 +123,9 @@ function displaySkillInfo(output) {
     preTag.style.margin = '0';
     displayOutput("<pre><code>my_info@consoleStyle:~$ <span style='color:#9FCA56;'>웹 실무</span>");
     displayOutput("<pre><code><span style='color:#9FCA56;'>- 웹 실무</br>"
-    + "- SI 웹 개발자로 경험한 프로젝트를 통해 복지부에서의 대규모 트래픽 DBMS 및 MVC패턴에 따른 자바 프로그래밍을 경험하였습니다.</br>"
+    + "- SI 웹 개발자로 경험한 프로젝트를 통해 복지부에서의 대규모 트래픽 DBMS 및 MVC패턴에 따른 자바 프로그래밍을 '경험'하였습니다.</br>"
     + "- 기획서와 문서화를 통해 전체적인 프로세스를 SI에서 배울 수 있었습니다.</br>"
-    + "- Vue 프레임워크인 Nuxt.js를 통해 프론트 언어로 화면 개발을 하였습니다.</br>"
+    + "- Vue 프레임워크인 Nuxt.js를 통해 프론트 언어로 화면 개발에 기여하였습니다.</br>"
     + "- DB (Oracle, Tibero, MySQL) : 고객의 요구사항에 맞는 기능을 삽입하거나 수정하고 설계할 수 있습니다.</br></span>");
 
 
@@ -154,24 +156,24 @@ function displayAboutInfo(output) {
     var preTag = document.createElement('pre');
     preTag.style.margin = '0';
     displayOutput("<pre><code>my_info@consoleStyle:~$ <span style='color:#9FCA56;'>About</span>");
-        displayOutput("<pre><code><span style='color:#9FCA56;'> 웹에서 더 나아가서 엔진을 비롯한 성능과 관련된 것에 관심이 많은 백엔드 개발자입니다</br>"+
-                    " 신입으로 23년 10월에 웹 SI 컨소시엄 사에 취직을 하였으며, 데이터베이스와 관련하여 안정적이고 최적화된 시스템 운영 경험이 있습니다.</br>"+
+        displayOutput("<pre><code><span style='color:#9FCA56;'> <strong>웹에서 더 나아가서 엔진을 비롯한 성능과 관련된 것에 관심이 많은 백엔드 개발자입니다.<strong></br></br>"+
+                    " 신입으로 22년 10월에 웹 SI 컨소시엄 사에 취직을 하였으며, 데이터베이스와 관련하여 안정적이고 최적화된 시스템 운영 경험이 있습니다.</br>"+
                     "MySQL, Oracle, Tibero와 같은 다양한 데이터베이스 시스템을 다루며 고객 요구사항에 맞는 데이터베이스 구조 설계와 쿼리 최적화 작업을 수행하였습니다.</br>"+
                     "또한, 백업 및 복원 작업과 보안 강화를 통해 안정성과 무결성을 유지하였습니다.</br></br>"+
                     " 청음복지관에서는 청각장애인을 위한 팀으로 PM을 맡고 있으며, 키오스크 프로그램을 Spring Boot 기반으로 MySQL로 직접 설계하였습니다.</br></br>"+
-                    "청각장애인 팀에서 PM을 맡고 있으며, 데브옵스부터 설계, 총괄 역할을 하면서 항상 공부를 하고 있습니다.</br></br>"+
-                    " 뿐만 아니라 C 언어를 비롯한 네이티브 프로그래밍 분야에서도 뛰어난 역량을 갖추고 있습니다.</br>"+
+                    "청각장애인 팀에서 데브옵스부터 설계, 총괄 역할을 하면서 항상 공부를 하고 있습니다.</br></br>"+
+                    " 뿐만 아니라 C언어를 비롯한 네이티브 프로그래밍 분야에서도 뛰어난 역량을 갖추고 있습니다.</br>"+
                     "구조체 포인터와 함수 포인터를 활용하여 객체지향의 원칙을 유사 객체지향으로 구현할 수 있는 능력이 있으며,</br>"+
                     "Makefile 및 CMake 등의 도구를 사용하여 리눅스에서 gcc 컴파일러 디버깅 작업도 수행해보았습니다.</br>"+
                     "취준생 시절에는 주로 기본기를 쌓기 위해 C언어로 유사 객체지향을 만들 때 써보았습니다.</br></br>"+
                     " 네이티브 언어에 집착하는 것보다 넓은 시야를 가지기 위해 웹으로 실무를 쌓기 시작하였습니다.</br>"+
                     "어떤 언어든지 두려워하지 않고 오픈 마인드로 새로운 기술에 도전합니다.</br>"+
-                    "저의 GitHub에는 C 언어로 유사 OOP 설계, 유사 STL 설계, 유사 Lambda 설계와 같은 연습 예제들이 포함되어 있습니다.</br>"+
+                    "저의 GitHub에는 C언어로 유사 OOP 설계, 유사 STL 설계, 유사 Lambda 설계와 같은 연습 예제들이 포함되어 있습니다.</br>"+
                     "이를 통해 제 코드 작성 스타일과 문제 해결 능력을 확인하실 수 있습니다.</br></br>"+
                     " 더 나아가서 저의 목표는 웹 엔진부터 시스템까지 넓은 범위의 전체적인 개발 과정에 참여하는 것이 가능한 프로가 되는 것입니다.</br>"+
-                    "문제 해결 능력과 협업 능력에 자신감을 갖추고, 항상 최신 기술 동향에 관심을 가지며 성장합니다.</br></br>"+
-                    " C 언어를 활용한 유사 객체지향 설계 경험은 로우레벨 프로그래밍 분야에서 다양한 역할과 기회로 이어질 수 있다고 생각합니다.</br>"+
-                    "이 경험을 웹 실무에 적용하여 복잡한 시스템 개발을 함께 해나가며 개발자들과 협력하여 세상의 발전에 기여하는 백엔드 개발자로 성장하고자 합니다.</br></span>");
+                    "문제 해결 능력과 협업 능력에 자신감을 갖추고, 항상 최신 기술 동향에 관심을 가지며 성장을 하고 있습니다.</br></br>"+
+                    "</br>"+
+                    "저는 웹 실무에서 겪은 경험과 외부 경험 등을 적용하여서 개발자들과 협력하고 세상의 발전에 기여하는 백엔드 개발자로 성장하고자 합니다.</br></span>");
     outputDiv.appendChild(table);
     outputDiv.scrollTop = outputDiv.scrollHeight;
     document.getElementById('commandInput').value = '';
@@ -207,7 +209,7 @@ function insertRow(table, label, value) {
     cell2.style.color = '#D8DEE9';
 }
 
-// 화면 클리어
+// screen clear
 function clearConsole() {
     document.getElementById('output').innerHTML = '';
     document.getElementById('commandInput').value = '';
@@ -217,7 +219,7 @@ function clearConsole() {
     }
 }
 
-// 커서 위치로 스크롤 이동
+// move to cursor
 function scrollToCursor() {
     var inputElement = document.getElementById('commandInput');
     inputElement.scrollIntoView({
