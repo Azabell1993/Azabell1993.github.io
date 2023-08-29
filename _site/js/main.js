@@ -211,6 +211,10 @@ function insertRow(table, label, value) {
 function clearConsole() {
     document.getElementById('output').innerHTML = '';
     document.getElementById('commandInput').value = '';
+    var promptElement = document.getElementById('prompt');
+    if (promptElement) {
+        promptElement.innerHTML = '';
+    }
 }
 
 // 커서 위치로 스크롤 이동

@@ -51,6 +51,19 @@ body {
 #return-button:hover {
     background-color: #43f04c;
 }
+.close {
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 5px;
+    padding: 7px 20px;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+    transition: background-color 0.5s ease;
+}
+.close:hover {
+    background-color: #1E1E1E;
+}
 #editor-container {
     width: 90%;
     height: 100%;
