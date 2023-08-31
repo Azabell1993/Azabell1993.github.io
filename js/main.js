@@ -235,7 +235,7 @@ function scrollToCursor() {
 function openEditorWindow() {
     var editorWindow = window.open('editor.html', '_blank', 'width=1200,height=900');
     editorWindow.onload = function () {
-        initializeEditor(editorWindow);
+        // initializeEditor(editorWindow);
         var savedContent = localStorage.getItem("savedContent");
         editorWindow.postMessage(savedContent, '*');
     };
