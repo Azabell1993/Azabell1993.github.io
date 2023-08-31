@@ -237,9 +237,9 @@ function openEditorWindow() {
     editorWindow.onload = function () {
         initializeEditor(editorWindow);
         var savedContent = localStorage.getItem("savedContent");
-        editorWindow.postMessage(savedContent, '*'); // Send saved content to editor.html
+        editorWindow.postMessage(savedContent, '*');
     };
-    document.getElementById('commandInput').value = '7'; // Clear input
+    document.getElementById('commandInput').value = '';
     return;
 }
 
