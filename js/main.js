@@ -256,16 +256,16 @@ function receiveEditorContent(content) {
     displayOutput("<pre><code>my_info@consoleStyle:~$ " + content);
 }
 
-function initializeEditor(editorWindow) {
-    var editorContainer = editorWindow.document.getElementById('editor-container');
+// function initializeEditor(editorWindow) {
+//     var editorContainer = editorWindow.document.getElementById('editor-container');
 
-    var editor = CodeMirror(editorContainer, {
-        mode: 'text/x-csrc',
-        theme: 'default',
-        lineNumbers: true,
-        indentWithTabs: true,
-        tabSize: 4,
-    });
+//     var editor = CodeMirror(editorContainer, {
+//         mode: 'text/x-csrc',
+//         theme: 'default',
+//         lineNumbers: true,
+//         indentWithTabs: true,
+//         tabSize: 4,
+//     });
 
-    editor.setValue("// Enter your C code here...");
-}
+//     editor.setValue("// Enter your C code here...");
+// }
