@@ -87,9 +87,12 @@ function displayResumeInfo(output) {
     insertRow(table, "임베디드 개발", "대한상공회의소 | C언어, Atmega128, STM(2021.05.25 ~ 2021.07.25)");
     insertRow(table, "- ","-  경력사항");
     insertRow(table, "2022.10.3.~재직 중", "엠티데이타 | SI 웹 개발");
-    insertRow(table, "2020.01.28 ~ 2020.10.16", "   나노에이스 | 금형설계 및 유지보수");
-    insertRow(table, "2017.11.20 ~ 2020.01.24", "   두리엔     | 금형설계 및 유지보수");
-    insertRow(table, "2014.08.13 ~ 2017.11.01", "   맥스킬     | 플랜트배관 설계 및 모델링");
+    insertRow(table, "2020.01.28 ~ 2020.10.16", "   나노**스 | 금형설계 및 증작 설계");
+    insertRow(table, "2019.03.01 ~ 2020.01.24", "   월드****놀러지 | 금형설계 및 증작 설계");
+    insertRow(table, "2017.11.20 ~ 2019.01.24", "   두*엔     | 금형설계 및 증작 설계");
+    insertRow(table, "2017.07.01 ~ 2017.11.01", "   에**스   | 금형 설계 인턴");
+    insertRow(table, "2016.04.01 ~ 2017.01.24", "   이**기술단 | 플랜트 배관 설계");
+    insertRow(table, "2014.08.13 ~ 2016.04.01", "   맥*킬     | 플랜트배관 설계 및 모델링");    
     insertRow(table, "- ","-  신체사항");
     insertRow(table, "청각장애 3급","3급 - 보청기, 인공와우(시끄러운 장소에서 다소 제약)");
     outputDiv.appendChild(table);
