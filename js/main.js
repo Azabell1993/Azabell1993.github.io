@@ -74,18 +74,35 @@ function displayResumeInfo(output) {
     var table = document.createElement('table');
     table.style.width = '100%';
     table.style.borderCollapse = 'collapse';
-    displayOutput("<pre><code>my_info@consoleStyle:~$ <span style='color:#9FCA56;'>기본인적 사항</span>");
-    // Insert rows for each piece of information
-    insertRow(table, "- ","- 기본정보");
-    insertRow(table, "이름", "박지우");
-    insertRow(table, "이메일", "jeewoo19930315@gmail.com");
-    insertRow(table, "깃허브", "https://github.com/Azabell1993");
-    insertRow(table, "자격증(취득일자)", "전산응용기계제도기능사(2014.07.18)");
-    insertRow(table, "- ","-  자기계발사항");
-    insertRow(table, "SIAT과정 (풀스택 과정)", "판교디지털훈련센터 | JAVA, Spring, Oracle 등(2022.02.21 ~ 2022.08.12)");
-    insertRow(table, "정보보안과정", "코리아IT아카데미 | Linux, PacketTracer 등(2021.08.24 ~ 2021.12.25)");
-    insertRow(table, "임베디드 개발", "대한상공회의소 | C언어, Atmega128, STM(2021.05.25 ~ 2021.07.25)");
-    insertRow(table, "- ","-  경력사항");
+
+    function insertRow(header, content) {
+        var tr = document.createElement('tr');
+        var th = document.createElement('th');
+        var td = document.createElement('td');
+        th.textContent = header;
+        td.textContent = content;
+        if (header === "- ") { // 섹션 헤더용
+            th.colSpan = 2;
+            th.className = 'section-header';
+            tr.appendChild(th);
+        } else {
+            tr.appendChild(th);
+            tr.appendChild(td);
+        }
+        table.appendChild(tr);
+    }
+
+    displayOutput("<pre><code>my_info@consoleStyle:~$ <span style='color:#9FCA56;'>기본인적 사항</span></code></pre>");
+    insertRow("- ", "- 기본정보");
+    insertRow("이름", "박지우");
+    insertRow("이메일", "jeewoo19930315@gmail.com");
+    insertRow("깃허브", "https://github.com/Azabell1993");
+    insertRow("자격증(취득일자)", "전산응용기계제도기능사(2014.07.18)");
+    insertRow("- ", "- 자기계발사항");
+    insertRow("SIAT과정 (풀스택 과정)", "판교디지털훈련센터 | JAVA, Spring, Oracle 등(2022.02.21 ~ 2022.08.12)");
+    insertRow("정보보안과정", "코리아IT아카데미 | Linux, PacketTracer 등(2021.08.24 ~ 2021.12.25)");
+    insertRow("임베디드 개발", "대한상공회의소 | C언어, Atmega128, STM(2021.05.25 ~ 2021.07.25)");
+    insertRow("- ", "- 경력사항");
     insertRow(table, "2022.10.3.~재직 중", "엠티데이타 | SI 웹 개발");
     insertRow(table, "2020.01.28 ~ 2020.10.16", "   나노**스 | 금형설계 및 증작 설계");
     insertRow(table, "2019.03.01 ~ 2020.01.24", "   월드****놀러지 | 금형설계 및 증작 설계");
@@ -93,61 +110,39 @@ function displayResumeInfo(output) {
     insertRow(table, "2017.07.01 ~ 2017.11.01", "   에**스   | 금형 설계 인턴");
     insertRow(table, "2016.04.01 ~ 2017.01.24", "   이**기술단 | 플랜트 배관 설계");
     insertRow(table, "2014.08.13 ~ 2016.04.01", "   맥*킬     | 플랜트배관 설계 및 모델링");    
-    insertRow(table, "- ","-  신체사항");
-    insertRow(table, "청각장애 3급","3급 - 보청기, 인공와우(시끄러운 장소에서 다소 제약)");
+    insertRow("- ", "- 신체사항");
+    insertRow("청각장애 3급", "3급 - 보청기, 인공와우(시끄러운 장소에서 다소 제약)");
     outputDiv.appendChild(table);
     outputDiv.scrollTop = outputDiv.scrollHeight;
     document.getElementById('commandInput').value = '';
 }
-
 function displaySkillInfo(output) {
     var outputDiv = document.getElementById('output');
     var table = document.createElement('table');
     table.style.width = '100%';
     table.style.borderCollapse = 'collapse';
 
-    var preTag = document.createElement('pre');
-    preTag.style.margin = '0';
-    displayOutput("<pre><code>my_info@consoleStyle:~$ <span style='color:#9FCA56;'>프로그래밍</span>");
-    displayOutput("<pre><code><span style='color:#9FCA56;'>- 프로그래밍 </br>"
-        + "  <strong>C언어</strong></br>"
-        + " 구조체 포인터와 함수 포인터를 어려움 없이 활용, 객체지향의 5원칙을 유사 객체지향으로 흉내, Makefile, Cmake, gdb 有</br ></br > "
-        + " 유사 OOP 설계 연습(2021년)              : 하기 링크 A </br> "
-        + " 유사 STL 설계 연습(2023년 상반기)_1     : 하기 링크 B </br> "
-        + " 유사 STL 설계 연습(2023년 상반기)_2     : 하기 링크 C </br> "
-        + " 유사 Lambda 설계 연습(2023년 상반기)    : 하기 링크 D </br></span>")
-    
-    insertRow(table, "A", "https://github.com/Azabell1993/ClangStructPointerExample")
-    insertRow(table,"B" ,"https://github.com/Azabell1993/c-programming-structPointer_data_structure_2023/blob/cb4f45dd76f58c9f14b320efbcca088a97f15231/basic_stl_2023/vector.h#L1-L133")
-    insertRow(table,"C" ,"https://github.com/Azabell1993/c-programming-structPointer_data_structure_2023/blob/cb4f45dd76f58c9f14b320efbcca088a97f15231/basic_stl_2023/add.h#L1-L73") 
-    insertRow(table, "D", "https://github.com/Azabell1993/c-programming-structPointer_data_structure_2023/blob/cb4f45dd76f58c9f14b320efbcca088a97f15231/C_functional%20programming/structural%20design/test4.c#L1-L36")
+    function addPreContent(content) {
+        var preTag = document.createElement('pre');
+        preTag.className = 'pre-wrap';
+        preTag.innerHTML = content;
+        outputDiv.appendChild(preTag);
+    }
 
-    var preTag = document.createElement('pre');
-    preTag.style.margin = '0';
-    displayOutput("<pre><code>my_info@consoleStyle:~$ <span style='color:#9FCA56;'>웹 실무</span>");
-    displayOutput("<pre><code><span style='color:#9FCA56;'>- 웹 실무</br>"
-    + "- SI 웹 개발자로 경험한 프로젝트를 통해 복지부에서의 대규모 트래픽 DBMS 및 MVC패턴에 따른 자바 프로그래밍을 '경험'하였습니다.</br>"
-    + "- 기획서와 문서화를 통해 전체적인 프로세스를 SI에서 배울 수 있었습니다.</br>"
-    + "- Vue 프레임워크인 Nuxt.js를 통해 프론트 언어로 화면 개발에 기여하였습니다.</br>"
-    + "- DB (Oracle, Tibero, MySQL) : 고객의 요구사항에 맞는 기능을 삽입하거나 수정하고 설계할 수 있습니다.</br></span>");
+    addPreContent("<code>my_info@consoleStyle:~$ <span style='color:#9FCA56;'>프로그래밍</span><br><span style='color:#9FCA56;'>- 프로그래밍 <br><strong>C언어</strong>구조체 포인터와 함수 포인터를 어려움 없이 활용, 객체지향의 5원칙을 유사 객체지향으로 흉내, Makefile, Cmake, gdb 有<br><br>유사 OOP 설계 연습(2021년) : 하기 링크 A<br>유사 STL 설계 연습(2023년 상반기)_1 : 하기 링크 B<br>유사 STL 설계 연습(2023년 상반기)_2 : 하기 링크 C<br>유사 Lambda 설계 연습(2023년 상반기) : 하기 링크 D</span></code>");
 
+    insertRow(table, "A", "https://github.com/Azabell1993/ClangStructPointerExample");
+    insertRow(table, "B", "https://github.com/Azabell1993/c-programming-structPointer_data_structure_2023/blob/cb4f45dd76f58c9f14b320efbcca088a97f15231/basic_stl_2023/vector.h#L1-L133");
+    insertRow(table, "C", "https://github.com/Azabell1993/c-programming-structPointer_data_structure_2023/blob/cb4f45dd76f58c9f14b320efbcca088a97f15231/basic_stl_2023/add.h#L1-L73");
+    insertRow(table, "D", "https://github.com/Azabell1993/c-programming-structPointer_data_structure_2023/blob/cb4f45dd76f58c9f14b320efbcca088a97f15231/C_functional%20programming/structural%20design/test4.c#L1-L36");
 
-    var preTag = document.createElement('pre');
-    preTag.style.margin = '0';
-    displayOutput("<pre><code>my_info@consoleStyle:~$ <span style='color:#9FCA56;'>DBMS</span>");
-    displayOutput("<pre><code><span style='color:#9FCA56;'>- DBMS </br>"
-    + "- MySQL, Oracle, Tibero: 프로젝트에서 데이터베이스 유지보수를 담당하면서 다양한 데이터베이스 시스템을 다루었습니다.</br>"
-    + "- 고객의 요구사항에 맞게 데이터베이스 구조를 설계하고, 쿼리 작성 및 최적화를 수행하였습니다.</br>"
-    + " 효율적인 옵티마이저 사용을 통해 성능 개선을 이루었습니다.</br > "
-    + "- 데이터 모델링: 프로젝트 초기 단계에서 요구사항 분석과 함께 데이터 모델링을 수행하였습니다.</br>" 
-    + " 엔터티와 관계의 정의, 속성 및 제약 조건 등을 고려하여 ER 다이어그램을 작성하였습니다.이를 기반으로 데이터베이스 스키마를 구축하고 관리하였습니다.</br>"
-    + "- 성능 최적화: 대규모 트래픽 처리에 필요한 성능 최적화 작업도 수행하였습니다.</br>" 
-    + " 인덱싱 전략, 쿼리 튜닝 등의 기술을 활용하여 쿼리 실행 속도와 시스템 응답 시간 개선에 기여하였습니다.</br></span>")
-    
+    addPreContent("<code>my_info@consoleStyle:~$ <span style='color:#9FCA56;'>웹 실무</span><br><span style='color:#9FCA56;'>- 웹 실무<br>- SI 웹 개발자로 경험한 프로젝트를 통해 복지부에서의 대규모 트래픽 DBMS 및 MVC패턴에 따른 자바 프로그래밍을 '경험'하였습니다.<br>- 기획서와 문서화를 통해 전체적인 프로세스를 SI에서 배울 수 있었습니다.<br>- Vue 프레임워크인 Nuxt.js를 통해 프론트 언어로 화면 개발에 기여하였습니다.<br>- DB (Oracle, Tibero, MySQL) : 고객의 요구사항에 맞는 기능을 삽입하거나 수정하고 설계할 수 있습니다.</span></code>");
+
+    addPreContent("<code>my_info@consoleStyle:~$ <span style='color:#9FCA56;'>DBMS</span><br><span style='color:#9FCA56;'>- DBMS <br>- MySQL, Oracle, Tibero: 프로젝트에서 데이터베이스 유지보수를 담당하면서 다양한 데이터베이스 시스템을 다루었습니다.<br>- 고객의 요구사항에 맞게 데이터베이스 구조를 설계하고, 쿼리 작성 및 최적화를 수행하였습니다.<br>효율적인 옵티마이저 사용을 통해 성능 개선을 이루었습니다.<br>- 데이터 모델링: 프로젝트 초기 단계에서 요구사항 분석과 함께 데이터 모델링을 수행하였습니다.<br>엔터티와 관계의 정의, 속성 및 제약 조건 등을 고려하여 ER 다이어그램을 작성하였습니다.이를 기반으로 데이터베이스 스키마를 구축하고 관리하였습니다.<br>- 성능 최적화: 대규모 트래픽 처리에 필요한 성능 최적화 작업도 수행하였습니다.<br>인덱싱 전략, 쿼리 튜닝 등의 기술을 활용하여 쿼리 실행 속도와 시스템 응답 시간 개선에 기여하였습니다.</span></code>");
+
     outputDiv.appendChild(table);
     outputDiv.scrollTop = outputDiv.scrollHeight;
     document.getElementById('commandInput').value = '';
-    
 }
 
 function displayAboutInfo(output) {
@@ -157,9 +152,8 @@ function displayAboutInfo(output) {
     table.style.borderCollapse = 'collapse';
 
     var preTag = document.createElement('pre');
-    preTag.style.margin = '0';
     displayOutput("<pre><code>my_info@consoleStyle:~$ <span style='color:#9FCA56;'>About</span>");
-                    displayOutput("<pre><code><span style='color:#9FCA56;'>"+
+    displayOutput("<pre><code><span style='color:#9FCA56;'>"+
                     "<strong>인프라 지식과 네이티브 프로그래밍에 능숙한 C/C++ 개발자로 성장하고자 하는 열정적인 개발자입니다.<strong></br></br>"+
                     "22년 10월에 웹 SI 컨소시엄에 신입 개발자로 합류하여, 데이터베이스 최적화 및 시스템 운영에 관한 경험을 쌓았습니다. MySQL, Oracle, Tibero를 활용하여 데이터베이스 설계 및 쿼리 최적화를 담당하며 시스템의 안정성을 유지하는데 기여하였습니다.</br>"+
                     "추가적으로 백업 및 복원 작업과 데이터 보안 강화에도 참여하였습니다.</br></br>"+

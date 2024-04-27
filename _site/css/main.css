@@ -1,90 +1,94 @@
 body {
     background-color: #1D2021;
     color: #D8DEE9;
-    font-family: Consolas, monospace;
+    font-family: 'Consolas', monospace;
     font-size: 14px;
     padding: 20px;
     margin: 0;
     display: flex;
+    flex-direction: column;
+    height: 100vh;
     overflow-x: hidden;
 }
 
 #console {
-    border-top: none;
+    flex-grow: 1;
     display: flex;
     flex-direction: column;
     padding: 10px;
+    overflow-y: auto;
+    border: 1px solid #4C566A;
+    margin-top: 20px;
+}
+
+.console-input {
+    background-color: #1D2021;
+    border: 2px solid #3B4252;
+    outline: none;
+    color: #D8DEE9;
+    font-family: 'Consolas', monospace;
+    font-size: 14px;
+    width: 100%;
+    padding: 5px;
+    caret-color: #ffffff;
+    box-sizing: border-box;
+}
+
+.pre-wrap {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    margin: 0;
+    padding: 5px;
+    background-color: #2E3440;
+    border-radius: 4px;
 }
 
 .tab-container {
     display: flex;
     align-items: center;
-    margin-bottom: 10px;
+    background-color: #3B4252;
+    padding: 10px;
+    border-radius: 4px;
 }
 
 #tab {
-    width: 30px;
-    height: 30px;
+    width: 25px;
+    height: 25px;
     background-color: #D8DEE9;
-    border-radius: 10px;
+    border-radius: 50%;
     text-align: center;
-    color: #1D2021;
-    font-size: 20px;
-    padding-top: 1px;
+    color: #2E3440;
+    line-height: 25px;
+    margin-right: 10px;
 }
 
 #tab-label {
-    margin-left: 5px;
+    font-weight: bold;
 }
 
 #prompt {
     color: #abee38;
-    position: relative;
-    padding-right: 10px;
-}
-
-#prompt::after {
-    position: absolute;
-    right: 0;
-    color: white;
-}
-
-.console-input {
-    background-color: #1D2021;
-    border: none;
-    outline: none;
-    color: #D8DEE9;
-    font-family: Consolas, monospace;
-    font-size: 14px;
-    width: 100%;
-    caret-color: #ffffff;
-}
-
-#table-container {
-    display: none;
 }
 
 table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 10px;
+    background-color: #2E3440;
 }
 
 th, td {
     border: 1px solid #D8DEE9;
     padding: 8px;
     text-align: left;
-    color: #D8DEE9;
+    color: #ECEFF4;
 }
 
 th {
-    background-color: #4C566A;
+    background-color: #5E81AC;
 }
 
-#console-output {
-    font-family: monospace;
-    white-space: pre;
-    color: white;
-    padding: 1px;
-    border-radius: 1px;
+.section-header {
+    background-color: #4C566A;
+    font-weight: bold;
 }
