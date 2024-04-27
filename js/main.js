@@ -71,6 +71,9 @@ function displayOutput(output) {
     
 function displayResumeInfo(output) {
     var outputDiv = document.getElementById('output');
+    var tableContainer = document.createElement('div');
+    tableContainer.className = 'table-container';
+
     var table = document.createElement('table');
     table.style.width = '100%';
     table.style.borderCollapse = 'collapse';
@@ -81,7 +84,7 @@ function displayResumeInfo(output) {
         var td = document.createElement('td');
         th.textContent = header;
         td.textContent = content;
-        if (header === "- ") { // 섹션 헤더용
+        if (header === "- ") {
             th.colSpan = 2;
             th.className = 'section-header';
             tr.appendChild(th);
@@ -112,10 +115,12 @@ function displayResumeInfo(output) {
     insertRow(table, "2014.08.13 ~ 2016.04.01", "   맥*킬     | 플랜트배관 설계 및 모델링");    
     insertRow("- ", "- 신체사항");
     insertRow("청각장애 3급", "3급 - 보청기, 인공와우(시끄러운 장소에서 다소 제약)");
-    outputDiv.appendChild(table);
+    tableContainer.appendChild(table);
+    outputDiv.appendChild(tableContainer);
     outputDiv.scrollTop = outputDiv.scrollHeight;
     document.getElementById('commandInput').value = '';
 }
+
 function displaySkillInfo(output) {
     var outputDiv = document.getElementById('output');
     var table = document.createElement('table');
@@ -147,9 +152,15 @@ function displaySkillInfo(output) {
 
 function displayAboutInfo(output) {
     var outputDiv = document.getElementById('output');
-    var table = document.createElement('table');
-    table.style.width = '100%';
-    table.style.borderCollapse = 'collapse';
+    var aboutContainer = document.createElement('div');
+    aboutContainer.className = 'table-container';
+
+    function addPreContent(content) {
+        var preTag = document.createElement('pre');
+        preTag.className = 'pre-wrap';
+        preTag.innerHTML = content;
+        aboutContainer.appendChild(preTag);
+    }
 
     var preTag = document.createElement('pre');
     displayOutput("<pre><code>my_info@consoleStyle:~$ <span style='color:#9FCA56;'>About</span>");
@@ -163,7 +174,7 @@ function displayAboutInfo(output) {
                     "저는 현재 C/C++을 중심으로, 인프라와 시스템에 필수적인 심도 있는 지식을 확장하고자 합니다. 궁극적인 목표는 고성능 컴퓨팅과 인프라 설계에 관한 전문성을 갖춘 개발자가 되어, 복잡한 시스템의 효율적 관리와 최적화를 달성하는 것입니다.</br>"+
                     "열린 마음으로 새로운 기술을 배우고 도전하며, 문제 해결 능력을 지속적으로 향상시키고자 합니다.</br></br>"+
                     "</span></code></pre>");
-    outputDiv.appendChild(table);
+    outputDiv.appendChild(aboutContainer);
     outputDiv.scrollTop = outputDiv.scrollHeight;
     document.getElementById('commandInput').value = '';
 }
@@ -244,17 +255,3 @@ function receiveEditorContent(content) {
     inputElement.value = content;
     displayOutput("<pre><code>my_info@consoleStyle:~$ " + content);
 }
-
-// function initializeEditor(editorWindow) {
-//     var editorContainer = editorWindow.document.getElementById('editor-container');
-
-//     var editor = CodeMirror(editorContainer, {
-//         mode: 'text/x-csrc',
-//         theme: 'default',
-//         lineNumbers: true,
-//         indentWithTabs: true,
-//         tabSize: 4,
-//     });
-
-//     editor.setValue("// Enter your C code here...");
-// }
