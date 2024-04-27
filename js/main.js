@@ -134,7 +134,12 @@ function displaySkillInfo(output) {
         outputDiv.appendChild(preTag);
     }
 
-    addPreContent("<code>my_info@consoleStyle:~$ <span style='color:#9FCA56;'>프로그래밍</span><br><span style='color:#9FCA56;'>- 프로그래밍 <br><strong>C언어</strong>구조체 포인터와 함수 포인터를 어려움 없이 활용, 객체지향의 5원칙을 유사 객체지향으로 흉내, Makefile, Cmake, gdb 有<br><br>유사 OOP 설계 연습(2021년) : 하기 링크 A<br>유사 STL 설계 연습(2023년 상반기)_1 : 하기 링크 B<br>유사 STL 설계 연습(2023년 상반기)_2 : 하기 링크 C<br>유사 Lambda 설계 연습(2023년 상반기) : 하기 링크 D</span></code>");
+    addPreContent("<code>my_info@consoleStyle:~$ <span style='color:#9FCA56;'>메인 언어 C/C++</span><br><span style='color:#9FCA56;'>"+
+    "- 프로그래밍 <br><strong>C언어</strong>구조체 포인터와 함수 포인터를 어려움 없이 활용, 객체지향의 5원칙을 유사 객체지향으로 흉내, Makefile, Cmake, gdb 有<br><br>"+
+    "유사 OOP 설계 연습(2021년) : 하기 링크 A<br>"+
+    "유사 STL 설계 연습(2023년 상반기)_1 : 하기 링크 B<br>"+
+    "유사 STL 설계 연습(2023년 상반기)_2 : 하기 링크 C<br>"+
+    "유사 Lambda 설계 연습(2023년 상반기) : 하기 링크 D</span></code>");
 
     insertRow(table, "A", "https://github.com/Azabell1993/ClangStructPointerExample");
     insertRow(table, "B", "https://github.com/Azabell1993/c-programming-structPointer_data_structure_2023/blob/cb4f45dd76f58c9f14b320efbcca088a97f15231/basic_stl_2023/vector.h#L1-L133");
@@ -166,12 +171,15 @@ function displayAboutInfo(output) {
     displayOutput("<pre><code>my_info@consoleStyle:~$ <span style='color:#9FCA56;'>About</span>");
     displayOutput("<pre><code><span style='color:#9FCA56;'>"+
                     "<strong>인프라 지식과 네이티브 프로그래밍에 능숙한 C/C++ 개발자로 성장하고자 하는 열정적인 개발자입니다.<strong></br></br>"+
-                    "22년 10월에 웹 SI 컨소시엄에 신입 개발자로 합류하여, 데이터베이스 최적화 및 시스템 운영에 관한 경험을 쌓았습니다. MySQL, Oracle, Tibero를 활용하여 데이터베이스 설계 및 쿼리 최적화를 담당하며 시스템의 안정성을 유지하는데 기여하였습니다.</br>"+
+                    "22년 10월에 웹 SI 컨소시엄에 신입 개발자로 합류하여, 데이터베이스 최적화 및 시스템 운영에 관한 경험을 쌓았습니다.</br>"+ 
+                    "MySQL, Oracle, Tibero를 활용하여 데이터베이스 설계 및 쿼리 최적화를 담당하며 시스템의 안정성을 유지하는데 기여하였습니다.</br>"+
                     "추가적으로 백업 및 복원 작업과 데이터 보안 강화에도 참여하였습니다.</br></br>"+
                     "개발 기술 뿐만 아니라, 청음복지관에서 청각장애인을 위한 키오스크 프로그램을 직접 설계하고 개발하는 프로젝트 매니저 역할을 수행했습니다.</br></br>"+
-                    "제 기술적 배경은 C/C++에서 특히 강점을 보이며, 구조체 포인터와 함수 포인터를 활용한 객체지향 프로그래밍 원칙의 구현, 리눅스 환경에서의 gcc 컴파일러 디버깅 등을 경험하였습니다.</br>"+
+                    "제 기술적 배경은 C/C++에서 특히 강점을 보이며,</br>"+
+                    "구조체 포인터와 함수 포인터를 활용한 객체지향 프로그래밍 원칙의 구현, 리눅스 환경에서의 gcc 컴파일러 디버깅 등을 경험하였습니다.</br>"+
                     "이러한 경험들을 바탕으로 네이티브 개발 능력을 강화하며, 넓은 범위의 기술 스택에 도전하는 개발자로 성장하고 있습니다.</br></br>"+
-                    "저는 현재 C/C++을 중심으로, 인프라와 시스템에 필수적인 심도 있는 지식을 확장하고자 합니다. 궁극적인 목표는 고성능 컴퓨팅과 인프라 설계에 관한 전문성을 갖춘 개발자가 되어, 복잡한 시스템의 효율적 관리와 최적화를 달성하는 것입니다.</br>"+
+                    "저는 현재 C/C++을 중심으로, 인프라와 시스템에 필수적인 심도 있는 지식을 확장하고자 합니다.</br>"+
+                    "궁극적인 목표는 고성능 컴퓨팅과 인프라 설계에 관한 전문성을 갖춘 개발자가 되어, 복잡한 시스템의 효율적 관리와 최적화를 달성하는 것입니다.</br>"+
                     "열린 마음으로 새로운 기술을 배우고 도전하며, 문제 해결 능력을 지속적으로 향상시키고자 합니다.</br></br>"+
                     "</span></code></pre>");
     outputDiv.appendChild(aboutContainer);
