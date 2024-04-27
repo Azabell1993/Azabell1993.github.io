@@ -56,7 +56,7 @@ body {
     color: #D8DEE9;
     font-family: Consolas, monospace;
     font-size: 14px;
-    width: 100%;
+    width: 60%;
     caret-color: #ffffff;
 }
 
@@ -65,7 +65,7 @@ body {
 }
 
 table {
-    width: 100%;
+    width: 60%;
     border-collapse: collapse;
     margin-top: 10px;
 }
